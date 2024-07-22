@@ -1,0 +1,864 @@
+19-07-2024
+
+1)student demo
+
+import java.util.*;
+class Student
+{
+    int rno;
+    String sname;
+    double per;
+    void accept()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter roll no,name,& per");
+        rno=sc.nextInt();
+        sname=sc.next();
+        per=sc.nextDouble();
+    }
+    void display()
+    {
+        System.out.println("Roll number="+rno);
+        System.out.println("Name="+sname);
+        System.out.println("Percentege="+per);
+    }
+}
+public class StudDemo
+{
+    public static void main(String[] args)
+    {
+        Student s1=new Student();
+        s1.accept();
+        s1.display();
+         Student s2=new Student();
+        s2.accept();
+        s2.display();
+         Student s3=new Student();
+        s3.accept();
+        s3.display();
+    }
+}
+
+2) book
+import java.util.*;
+class Book
+{
+    int bid;
+    String bname;
+    String author;
+    double price;
+    void accept()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter book id,bname,author & pirce");
+        bid=sc.nextInt();
+        bname=sc.next();
+        author=sc.next();
+        price=sc.nextDouble();
+        
+    }
+    void display()
+    {
+        System.out.println("book id="+bid);
+        System.out.println("book Name="+bname);
+        System.out.println("Author="+author);
+        System.out.println("Price="+price);
+    }
+}
+public class Book_info
+{
+    public static void main(String[] args)
+    {
+        Book b1=new Book();
+        b1.accept();
+        b1.display();
+       /* Book b2=new Book();
+        b2.accept();
+        b2.display();
+        Book b3=new Book();
+        b3.accept();
+        b3.display();*/
+        
+    }
+}
+
+
+3)vehical
+
+
+import java.util.*;
+class Vehicle
+{
+     int vid; 
+     String vname,compname,color,ownern;
+     double price;
+
+    void accept()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter vid, vname,compname,color,ownern,price");
+        vid=sc.nextInt();
+        vname=sc.next();
+        compname=sc.next();
+        color=sc.next();
+        ownern=sc.next();
+        price=sc.nextDouble();
+        
+    }
+    void display()
+    {
+        System.out.println(" vid="+vid);
+        System.out.println("Vehicle Name="+vname);
+        System.out.println("compname="+compname);
+        System.out.println("color="+color);
+        System.out.println("ownern="+ownern);
+        System.out.println("Price="+price);
+    }
+}
+public class vehical_info
+{
+    public static void main(String[] args)
+    {
+        Vehicle v1=new Vehicle();
+        v1.accept();
+        v1.display();
+       /* Book b2=new Book();
+        b2.accept();
+        b2.display();
+        Book b3=new Book();
+        b3.accept();
+        b3.display();*/
+        
+    }
+}
+
+4)Employee
+
+
+import java.util.Scanner;
+ class Employee 
+{
+	int eid;
+	String ename;
+	double salary;
+	double designationprice;
+	void accept()
+	{
+		Scanner sc=new Scanner (System.in);
+		System.out.println("Enter eid,ename,salary,designationprice ");
+	    eid=sc.nextInt();
+		ename=sc.next();
+		salary=sc.nextDouble();	
+		designationprice=sc.nextDouble();	
+	}
+	void display()
+	{
+		System.out.println("eid="+eid);
+		System.out.println("eName="+ename);
+		System.out.println("Salary="+salary);
+		System.out.println("designation price="+designationprice);
+		
+	}
+}
+public class EmpDemo {
+
+	public static void main(String[] args) {
+		Employee e1=new Employee();		
+		e1.accept();
+		e1.display();
+	Employee e2=new Employee();
+		e2.accept();
+		e2.display();
+
+
+	}
+
+}
+
+
+20-07-2024
+1)
+
+Main.java
+import java.util.Scanner;
+ class AreaDemo 
+{
+	double r,A;
+	void accept(double r)
+	{
+		this.r=r;
+	}
+	double cal_area()
+	{
+		A=3.14*r*r;
+		return(A);
+
+	}
+
+}
+public class Main
+{
+                    public static void main(String[] args) 
+	{
+		double r,A;
+		Scanner sc =new Scanner (System.in);
+		AreaDemo a1=new AreaDemo();
+		System.out.println("Enter value of r");
+		r=sc.nextDouble();
+		a1.accept(r);
+		A=a1.cal_area();
+		System.out.println("Area="+A);
+	}
+
+}
+
+2)factorial
+public class Fact_Demo 
+{
+	int n,f1=1,i;
+	void accept(int n)
+	{
+		this.n=n;
+	}
+	int cal_fact()
+	{
+		for()
+		{
+		}
+		return(f1);
+
+	}
+}
+public class Main
+{
+                    public static void main(String[] args) 
+	{
+		int n,f1;
+		Scanner sc =new Scanner (System.in);
+		Fact_Demo a1=new Fact_Demo();
+		System.out.println("Enter value of r");
+		n=sc.nextInt();
+		a1.accept(n);
+		f1=a1.cal_fact();
+		System.out.println("Fact="+f1);
+	}
+
+}
+
+3)dissarium,vowel,prime
+
+import java.util.Scanner;
+
+public class FunctionalProgram {
+    
+    
+    static boolean isDissarium(int number) {
+        String numStr = String.valueOf(number);
+        int len = numStr.length();
+        int sum = 0;
+        
+        for (int i = 0; i < len; i++) {
+            int digit = Character.getNumericValue(numStr.charAt(i));
+            sum += Math.pow(digit, i + 1);
+        }
+        
+        return sum == number;
+    }
+    
+   
+    static boolean isVowel(char ch) {
+        ch = Character.toLowerCase(ch);
+        return ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u';
+    }
+    
+    static boolean isPrime(int number) {
+        if (number <= 1) {
+            return false;
+        }
+        
+        for (int i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        
+        return true;
+    }
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter a number to check if it's Dissarium: ");
+        int num1 = scanner.nextInt();
+        
+        if (isDissarium(num1)) {
+            System.out.println(num1 + " is a Dissarium number.");
+        } else {
+            System.out.println(num1 + " is not a Dissarium number.");
+        }
+        
+        scanner.nextLine();
+        
+        System.out.print("Enter a character to check if it's a vowel: ");
+        char ch = scanner.nextLine().charAt(0);
+        
+        if (isVowel(ch)) {
+            System.out.println(ch + " is a vowel.");
+        } else {
+            System.out.println(ch + " is not a vowel.");
+        }
+        
+        System.out.print("Enter a number to check if it's prime: ");
+        int num2 = scanner.nextInt();
+        
+        if (isPrime(num2)) {
+            System.out.println(num2 + " is a prime number.");
+        } else {
+            System.out.println(num2 + " is not a prime number.");
+        }
+        
+        scanner.close();
+    }
+}
+
+4)max form 2 no
+
+import java.util.Scanner;
+
+public class MaxNumberProgram {
+    
+    static int max(int num1, int num2) {
+        return num1 > num2 ? num1 : num2;
+    }
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter the first number: ");
+        int number1 = scanner.nextInt();
+        
+        System.out.print("Enter the second number: ");
+        int number2 = scanner.nextInt();
+        
+        int maximum = max(number1, number2);
+        
+        System.out.println("The maximum of " + number1 + " and " + number2 + " is: " + maximum);
+        
+        scanner.close();
+    }
+}
+
+5)REVERSE,ARMSTRONG,MAGIC,MAX FROM 3
+
+import java.util.Scanner;
+
+public class NumberFunctions {
+    
+ 
+    static int reverseNumber(int number) {
+        int reversedNumber = 0;
+        while (number != 0) {
+            int digit = number % 10;
+            reversedNumber = reversedNumber * 10 + digit;
+            number /= 10;
+        }
+        return reversedNumber;
+    }
+    
+   
+    static boolean isArmstrong(int number) {
+        int originalNumber = number;
+        int sum = 0;
+        int digits = String.valueOf(number).length();
+        
+        while (number != 0) {
+            int digit = number % 10;
+            sum += Math.pow(digit, digits);
+            number /= 10;
+        }
+        
+        return sum == originalNumber;
+    }
+    
+
+    static boolean isMagic(int number) {
+        while (number > 9) {
+            number = sumOfDigits(number);
+        }
+        return number == 1;
+    }
+    
+   
+    static int sumOfDigits(int number) {
+        int sum = 0;
+        while (number != 0) {
+            sum += number % 10;
+            number /= 10;
+        }
+        return sum;
+    }
+    
+   
+    static int maxOfThree(int num1, int num2, int num3) {
+        int max = num1;
+        if (num2 > max) {
+            max = num2;
+        }
+        if (num3 > max) {
+            max = num3;
+        }
+        return max;
+    }
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+      
+        System.out.print("Enter a number to reverse: ");
+        int numberToReverse = scanner.nextInt();
+        int reversedNumber = reverseNumber(numberToReverse);
+        System.out.println("Reversed number: " + reversedNumber);
+        
+      
+        System.out.print("\nEnter a number to check if it's Armstrong: ");
+        int numberForArmstrong = scanner.nextInt();
+        if (isArmstrong(numberForArmstrong)) {
+            System.out.println(numberForArmstrong + " is an Armstrong number.");
+        } else {
+            System.out.println(numberForArmstrong + " is not an Armstrong number.");
+        }
+
+          System.out.print("\nEnter a number to check if it's Magic: ");
+        int numberForMagic = scanner.nextInt();
+        if (isMagic(numberForMagic)) {
+            System.out.println(numberForMagic + " is a Magic number.");
+        } else {
+            System.out.println(numberForMagic + " is not a Magic number.");
+        }
+        
+        
+        System.out.print("\nEnter three numbers to find the maximum (separated by spaces): ");
+        int num1 = scanner.nextInt();
+        int num2 = scanner.nextInt();
+        int num3 = scanner.nextInt();
+        int max = maxOfThree(num1, num2, num3);
+        System.out.println("Maximum of " + num1 + ", " + num2 + ", and " + num3 + " is: " + max);
+        
+        scanner.close();
+    }
+}
+
+6)
+import java.util.Scanner;
+public class ParaMethodDemo 
+{	
+	int flag=0,n1,n,x,sum=0,p,f1=1,i;
+	void accept(int n)
+	{
+		this.n=n;
+	}
+	void pattern()
+	{
+
+	for(int i=1;i<=n;i++)
+	{
+		for(int j=1;j<=i;j++)
+		{
+			SOprint(""+j);
+		}
+		SOPrintln();
+	}
+	}
+	void prime()
+	{
+		
+		for(i=2;i<=(n/2);i++)
+		{
+		if(n%i==0)
+		{
+		flag=1;
+		break;
+		}
+		}
+		
+		if(flag==0)
+			System.out.println("No is prime");
+		else
+			System.out.println("No is not prime");
+	}
+String pal()
+	{
+		p=n;
+		while(p>0)
+		{
+		n1=p%10;
+		p=p/10;
+		sum=(sum*10)+n1;
+		}
+		
+		if(sum==n)
+			return "No is pal";
+		else
+			return "No is not pal";
+	}
+	
+int power(int x)
+{
+                  this.x=x;
+	for(i=1;i<=n;i++)
+	{
+	f1=f1*x;
+	}
+	return (f1);
+	
+}
+	public static void main(String[] args) 
+	{
+	                  int n,x;
+		Scanner sc =new Scanner (System.in);
+		ParaMethodDemo a1=new ParaMethodDemo();
+		System.out.println("Enter value of n");
+		n=sc.nextInt();
+		a1.accept(n);
+		a1.pattern();
+		
+		a1.prime();		
+		System.out.println(""+a1.pal());		
+		System.out.println("Enter value of x");
+		x=sc.nextInt();	
+		int f1=a1.power(x);	
+		System.out.println("Power"+f1);
+
+	}
+
+}
+
+7)Any 4 favourite functions add in class use any three types of userdefine function
+
+import java.util.Scanner;
+
+public class FavoriteFunctions {
+    
+    
+    static int factorial(int n) {
+        if (n == 0 || n == 1) {
+            return 1;
+        }
+        return n * factorial(n - 1);
+    }
+    
+    static boolean isEven(int number) {
+        return number % 2 == 0;
+    }
+    
+    static void fibonacci(int n) {
+        int a = 0, b = 1;
+        System.out.print("Fibonacci series up to " + n + " terms: ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(a + " ");
+            int temp = a + b;
+            a = b;
+            b = temp;
+        }
+        System.out.println();
+    }
+    static int sumOfDigits(int number) {
+        int sum = 0;
+        while (number != 0) {
+            sum += number % 10;
+            number /= 10;
+        }
+        return sum;
+    }
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Choose one of the favorite functions:");
+        System.out.println("1. Factorial calculation");
+        System.out.println("2. Check if a number is even");
+        System.out.println("3. Generate Fibonacci series");
+        System.out.println("4. Sum of digits of a number");
+        System.out.print("Enter your choice (1-4): ");
+        
+        int choice = scanner.nextInt();
+        
+        switch (choice) {
+            case 1:
+                System.out.print("Enter a number to calculate factorial: ");
+                int numFactorial = scanner.nextInt();
+                int factorialResult = factorial(numFactorial);
+                System.out.println("Factorial of " + numFactorial + " is: " + factorialResult);
+                break;
+            case 2:
+                System.out.print("Enter a number to check if it's even: ");
+                int numEven = scanner.nextInt();
+                if (isEven(numEven)) {
+                    System.out.println(numEven + " is even.");
+                } else {
+                    System.out.println(numEven + " is odd.");
+                }
+                break;
+            case 3:
+                System.out.print("Enter the number of terms for Fibonacci series: ");
+                int numTerms = scanner.nextInt();
+                fibonacci(numTerms);
+                break;
+            case 4:
+                System.out.print("Enter a number to find the sum of its digits: ");
+                int numSumOfDigits = scanner.nextInt();
+                int sumDigitsResult = sumOfDigits(numSumOfDigits);
+                System.out.println("Sum of digits of " + numSumOfDigits + " is: " + sumDigitsResult);
+                break;
+            default:
+                System.out.println("Invalid choice. Please enter a number between 1 and 4.");
+                break;
+        }
+        
+        scanner.close();
+    }
+}
+
+*******************************************************************************************************
+
+* Array of an Object
+1)
+import java.util.Scanner;
+public class Student 
+{
+	int rno;
+	String sname;
+	double per;
+	void accept()
+	{
+		Scanner sc=new Scanner (System.in);
+		System.out.println("Enter rollno ,name & per");
+		rno=sc.nextInt();
+		sname=sc.next();
+		per=sc.nextDouble();
+	
+	}
+	void display()
+	{
+		System.out.println("Rollno="+rno);
+		System.out.println("Name="+sname);
+		System.out.println("Per="+per);
+		
+	}
+}
+class Main
+{	
+public static void main(String[] args) 	
+	{
+		int n,i;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter no of students");
+		n=sc.nextInt();
+		Student s1[]=new Student[n];//Array creation
+		for(i=0;i<n;i++)
+		{
+			s1[i]=new Student();//object creation
+			s1[i].accept();
+			s1[i].display();
+		}				
+	}
+}
+
+2)
+
+import java.util.Scanner;
+
+class Book {
+    int bid;
+    String bname;
+    String author;
+    double price;
+    
+    void accept() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter book id, name, author, and price:");
+        bid = sc.nextInt();
+        bname = sc.next();
+        author = sc.next();
+        price = sc.nextDouble();
+    }
+    
+    void display() {
+        System.out.println("Book id: " + bid);
+        System.out.println("Book Name: " + bname);
+        System.out.println("Author: " + author);
+        System.out.println("Price: " + price);
+    }
+}
+
+public class Book_info {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter the number of books: ");
+        int numBooks = scanner.nextInt();
+        
+        Book[] books = new Book[numBooks]; // Array of Book objects
+        
+        for (int i = 0; i < numBooks; i++) {
+            books[i] = new Book();
+            books[i].accept();
+        }
+        
+        System.out.println("\nDetails of Books:");
+        for (int i = 0; i < numBooks; i++) {
+            books[i].display();
+            System.out.println(); 
+        }
+        
+        scanner.close();
+    }
+}
+
+3)
+
+import java.util.Scanner;
+
+class Vehicle {
+    int vid;
+    String vname;
+    String compname;
+    String color;
+    String ownern;
+    double price;
+    
+    void accept() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter vehicle id, name, company name, color, owner name, and price:");
+        vid = sc.nextInt();
+        vname = sc.next();
+        compname = sc.next();
+        color = sc.next();
+        ownern = sc.next();
+        price = sc.nextDouble();
+    }
+    
+    void display() {
+        System.out.println("Vehicle id: " + vid);
+        System.out.println("Vehicle Name: " + vname);
+        System.out.println("Company Name: " + compname);
+        System.out.println("Color: " + color);
+        System.out.println("Owner Name: " + ownern);
+        System.out.println("Price: " + price);
+    }
+}
+
+public class vehical_info {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter the number of vehicles: ");
+        int numVehicles = scanner.nextInt();
+        
+        Vehicle[] vehicles = new Vehicle[numVehicles];
+        
+        // Accept details for each vehicle
+        for (int i = 0; i < numVehicles; i++) {
+            vehicles[i] = new Vehicle();
+            vehicles[i].accept();
+        }
+        
+        
+        System.out.println("\nDetails of Vehicles:");
+        for (int i = 0; i < numVehicles; i++) {
+            vehicles[i].display();
+            System.out.println(); 
+        }
+        
+        scanner.close();
+    }
+}
+4)prime
+
+import java.util.Scanner;
+public class Area_Demo 
+{
+	double r,A;
+	void accept(double r)
+	{
+		this.r=r;
+	}
+	double cal_area()
+	{
+		A=3.14*r*r;
+		return(A);
+	}
+              public static void main(String[] args) 
+	{
+		double r;
+		int n,i;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter no of records");
+		n=sc.nextInt();
+		
+		Area_Demo a1[]=new Area_Demo[n];
+		for(i=0;i<n;i++)
+		{
+	                 a1[i]=new Area_Demo()
+		System.out.println("Enter value of r");
+		r=sc.nextDouble();
+		a1[i].accept(r);
+		System.out.println("Area="+a1[i].cal_area());
+		}
+		
+
+	}
+
+}
+
+
+5)factorial
+
+import java.util.Scanner;
+
+public class Fact_Demo {
+    private int n;
+    private int fact = 1;
+    
+
+    public void accept(int n) {
+        this.n = n;
+    }
+    
+    
+    public int cal_fact() {
+        for (int i = 1; i <= n; i++) {
+            fact *= i;
+        }
+        return fact;
+    }
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter the number of values for which you want to calculate factorial: ");
+        int numValues = scanner.nextInt();
+        
+        Fact_Demo[] factObjects = new Fact_Demo[numValues];
+        
+        
+        for (int i = 0; i < numValues; i++) {
+            factObjects[i] = new Fact_Demo();
+            
+            System.out.print("Enter value " + (i + 1) + ": ");
+            int value = scanner.nextInt();
+            
+            factObjects[i].accept(value);
+        }
+        
+        
+        System.out.println("\nFactorials:");
+        for (int i = 0; i < numValues; i++) {
+            int factorial = factObjects[i].cal_fact();
+            System.out.println("Factorial of " + factObjects[i].n + " is: " + factorial);
+        }
+        
+        scanner.close();
+    }
+}
+
